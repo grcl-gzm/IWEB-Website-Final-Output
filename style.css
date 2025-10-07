@@ -110,10 +110,10 @@ nav ul li a:hover {
   transition: 0.3s;
 }
 
-/* .contact-btn:hover {
+.contact-btn:hover {
   background: #444;
   color: #fff;
-} */
+}
 
 /* ======================================= */
 /* ========== MAIN PAGE STYLES =========== */
@@ -353,7 +353,6 @@ section h2, section h3 {
   background: #A6CDFF;
   padding: 20px 0 15px 0;
   z-index: 200;
-  margin-bottom: 30px;
 }
 
 .gallery-nav {
@@ -364,29 +363,22 @@ section h2, section h3 {
 }
 
 
-.personal-project-section {
-  margin-top: 100px; 
-  padding-top: 20px;
-  z-index: 1;
-  position: fixed;
-}
-
 /* Gallery Page Title */
 .gallery-page-title {
-  position: sticky;
-  top: 90px;
   background: none;   
   z-index: 101;
   text-align: center;
   font-size: 2.8rem;
-  margin: 0 0 15px 0;
   color: #111;
-  padding: 0.5rem 0;
+  padding: 0;
 }
 
 /* Gallery Navigation Tabs */
 .gallery-nav {
-  padding: 0;
+  top: 90px; 
+  z-index: 201; 
+  background: #A6CDFF;
+  padding: 15px 0; 
 }
 
 .gallery-nav ul {
@@ -464,13 +456,13 @@ section h2, section h3 {
   grid-template-columns: repeat(2, 1fr);
 }
 
-/* Character Grid - Mixed layout */
+/* Character Grid */
 .character-grid {
   grid-template-columns: repeat(3, 1fr);
   background-color:#cfe1f8;
 }
 
-/* Environment Grid - 2 columns for top images, then full width */
+/* Environment Grid */
 .environment-grid {
   grid-template-columns: repeat(2, 1fr);
   background-color:#cfe1f8;
