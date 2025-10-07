@@ -362,6 +362,15 @@ section h2, section h3 {
   background: #A6CDFF;
 }
 
+#personal-projects {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#personal-projects:hover {
+  color: #1C71AD; 
+}
+
 
 /* Gallery Page Title */
 .gallery-page-title {
