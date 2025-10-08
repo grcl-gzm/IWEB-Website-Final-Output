@@ -508,14 +508,13 @@ section h2, section h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
-  margin-bottom: 40px;
+  margin-bottom: 28px;
 }
 
 .swipe-gallery {
   width: 100%;
-  max-width: 600px;
-  min-height: 320px;
+  max-width: 800px;
+  min-height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -526,9 +525,9 @@ section h2, section h3 {
   width: 100%;
   height: auto;
   max-width: 100%;
-  max-height: 400px;
+  max-height: 500px;
   object-fit: contain;
-  border-radius: 8px;
+  border-radius: 12px;
   box-shadow: none;
   display: none;
 }
@@ -542,9 +541,9 @@ section h2, section h3 {
   color: #fff;
   border: none;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 1.5rem;
+  width: 44px;
+  height: 44px;
+  font-size: 1.7rem;
   cursor: pointer;
   box-shadow: 0 2px 6px rgba(0,0,0,0.12);
   transition: background 0.2s;
@@ -561,18 +560,35 @@ section h2, section h3 {
   background: #1C71AD;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .swipe-gallery {
-    max-width: 95vw;
-    min-height: 180px;
+    max-width: 98vw;
+    min-height: 220px;
   }
   .swipe-slide {
-    max-height: 200px;
+    max-height: 300px;
+    border-radius: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .gallery-section-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  .swipe-gallery {
+    min-height: 120px;
+  }
+  .swipe-slide {
+    max-height: 140px;
+    border-radius: 8px;
   }
   .swipe-btn {
     width: 32px;
     height: 32px;
     font-size: 1.1rem;
+  }
+  .dashed-divider {
+    margin: 24px auto 10px auto;
   }
 }
 
