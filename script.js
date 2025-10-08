@@ -12,6 +12,34 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// ---------------------------------------
+// Page Transition
+// Fade in the page on load
+  setTimeout(function() {
+    document.body.classList.add('page-fade-in');
+  }, 10);
+
+  document.querySelectorAll('nav a').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      const href = link.getAttribute('href');
+
+    if (href && href === 'MainPage.html#about-artist') {
+            e.preventDefault();
+            document.body.classList.remove('page-fade-in');
+            setTimeout(function() {
+              window.location.replace('MainPage.html#about-artist');
+            }, 500);
+    } else if (href && !href.startsWith('#')) {
+        e.preventDefault();
+        document.body.classList.remove('page-fade-in');
+        setTimeout(function() {
+          window.location.href = href;
+        }, 500);
+      }
+    });
+  });
+
+// ---------------------------------------
 // Swiping gallery feature
 document.addEventListener('DOMContentLoaded', function() {
   function setupSwipeGallery(slideSelector, prevBtnId, nextBtnId) {
