@@ -487,10 +487,8 @@ section h2, section h3 {
 }
 
 .swipe-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
+  position: static;
+  margin: 0 18px;
   background: #6fa3f7;
   color: #fff;
   border: none;
@@ -504,10 +502,10 @@ section h2, section h3 {
 }
 
 .swipe-feature .swipe-btn:first-of-type {
-  left: 10px;
+  left: unset;
 }
 .swipe-feature .swipe-btn:last-of-type {
-  right: 10px;
+  right: unset;
 }
 
 .swipe-btn:hover {
