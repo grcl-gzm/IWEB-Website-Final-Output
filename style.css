@@ -521,6 +521,12 @@ section h2, section h3 {
     max-height: 300px;
     border-radius: 10px;
   }
+  .swipe-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+    margin: 0 8px;
+  }
 }
 @media (max-width: 600px) {
   .gallery-section-title {
