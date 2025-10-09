@@ -546,6 +546,30 @@ section h2, section h3 {
   }
 }
 
+/* --------------------------------------- */
+/* BTS Videos */
+
+.video-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+.video-gallery video {
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  background: #fff;
+  max-width: 100%;
+}
+@media (max-width: 700px) {
+  .video-gallery video {
+    width: 98vw;
+    max-width: 98vw;
+  }
+}
+
 /* ======================================= */
 /* ========== CONTACT PAGE STYLES ======== */
 /* ======================================= */

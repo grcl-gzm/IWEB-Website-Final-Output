@@ -40,8 +40,36 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 // ---------------------------------------
-// Swiping gallery feature
+// Page Transition
+
 document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(function() {
+    document.body.classList.add('page-fade-in');
+  }, 10);
+
+  document.querySelectorAll('nav a').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      const href = link.getAttribute('href');
+
+      if (href && href === 'MainPage.html#about-artist') {
+        e.preventDefault();
+        document.body.classList.remove('page-fade-in');
+        setTimeout(function() {
+          window.location.replace('MainPage.html#about-artist');
+        }, 500);
+      
+      } else if (href && !href.startsWith('#')) {
+        e.preventDefault();
+        document.body.classList.remove('page-fade-in');
+        setTimeout(function() {
+          window.location.href = href;
+        }, 500);
+      }
+    });
+  });
+
+// ---------------------------------------
+// Swiping gallery feature
   function setupSwipeGallery(slideSelector, prevBtnId, nextBtnId) {
     let currentSlide = 0;
     const slides = document.querySelectorAll(slideSelector);
@@ -75,4 +103,5 @@ document.addEventListener('DOMContentLoaded', function() {
   setupSwipeGallery('.inv-slide', 'inv-prev', 'inv-next');
   setupSwipeGallery('.logo-slide', 'logo-prev', 'logo-next');
   setupSwipeGallery('.char-slide', 'char-prev', 'char-next');
+  setupSwipeGallery('.vid-slide', 'vid-prev', 'vid-next');
 });
