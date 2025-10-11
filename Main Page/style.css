@@ -726,3 +726,271 @@ footer p img {
 }
 
 
+/* ======================================= */
+/* ========== RESPONSIVE DESIGN ========== */
+/* ======================================= */
+
+/* --- Tablet View Fix (768px – 1024px) --- */
+@media (max-width: 1024px) {
+
+  /* About the Artist section */
+  .skills-experience-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 50px;
+  }
+
+  .skills-box,
+  .experience-box,
+  .education-box {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  section {
+    margin: 20px auto;
+    padding: 16px;
+  }
+
+  /* Personal Projects Tabs */
+  .gallery-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .gallery-nav ul li a {
+    padding: 8px 14px;
+    font-size: 1rem;
+  }
+}
+
+/* ---------- Mobile Devices (max-width: 768px) ---------- */
+@media (max-width: 768px) {
+
+  body {
+    font-size: 15px;
+  }
+
+  section {
+    margin: 16px auto;
+    padding: 14px;
+    width: 95%;
+    box-sizing: border-box;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 8px;
+  }
+
+  header .tagline h1 {
+    font-size: 1.6rem;
+  }
+
+  header .tagline hr {
+    width: 160px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+  }
+
+  /* Profile section */
+  .profile .avatar {
+    width: 260px;
+  }
+
+  .profile-text {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  /* About the Artist, Experience, Education */
+  .skills-experience-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding: 10px;
+  }
+
+  .skills-box,
+  .experience-box,
+  .education-box {
+    width: 95%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 14px;
+  }
+
+  .skills-box ul {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  /* Gallery / Projects section */
+  .gallery-page-title {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .gallery-nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .gallery-nav ul li a {
+    width: 90%;
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .gallery-page-title,
+  .gallery-nav {
+    position: sticky;
+    top: 60px; 
+    z-index: 90;
+    background: #cfe1f8; 
+  }
+
+  .gallery-page-title {
+    padding-top: 8px;
+    padding-bottom: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .gallery-nav {
+    padding-top: 4px;
+    padding-bottom: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Video Gallery layout */
+  .video-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .video-gallery video {
+    width: 100%;
+  }
+
+  /* Buttons and forms */
+  .swipe-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+
+  .art-commission-box {
+    width: 95%;
+    padding: 10px;
+    margin: 0 auto;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 1rem;
+  }
+
+  .submit-btn {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+  footer {
+    padding: 10px;
+    text-align: center;
+  }
+
+  footer p {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+}
+
+
+/* ---------- Small Phones (max-width: 480px) ---------- */
+@media (max-width: 480px) {
+
+  section {
+    margin: 10px auto;
+    padding: 12px;
+    width: 100%;
+  }
+
+  header .tagline h1 {
+    font-size: 1.4rem;
+  }
+
+  nav ul li a {
+    font-size: 1rem;
+  }
+
+  /* Profile */
+  .profile .avatar {
+    width: 200px;
+  }
+
+  .profile-text {
+    font-size: 1.3rem;
+  }
+
+  .skills-box,
+  .experience-box,
+  .education-box {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .education-box ul li,
+  .experience-box ul li {
+    font-size: 1rem;
+  }
+
+  .gallery-page-title {
+    font-size: 1.3rem;
+  }
+
+  .gallery-nav ul li a {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+    width: 90%;
+  }
+
+  .gallery-page-title,
+  .gallery-nav {
+    top: 50px;
+  }
+
+  .skills-box img,
+  .app-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .submit-btn {
+    font-size: 1rem;
+    padding: 8px 14px;
+  }
+
+  footer p img {
+    width: 24px;
+  }
+}
