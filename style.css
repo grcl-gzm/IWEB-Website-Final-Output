@@ -355,6 +355,116 @@ section h2, section h3 {
 /* ========== GALLERY PAGE STYLES ======== */
 /* ======================================= */
 
+/* --- START of Mobile Hamburger Navigation --- */
+.gallery-nav-header {
+  position: sticky;
+  top: 0;
+  background-color: #cfe1f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  z-index: 1000;
+}
+
+/* Keep title centered */
+.gallery-page-title {
+  flex: 1;
+  text-align: center;
+  color: #0d47a1;
+  font-weight: 700;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+/* Make hamburger visible on the right side */
+.hamburger {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  width: 26px;
+  z-index: 1100;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #0d47a1;
+  border-radius: 3px;
+  transition: 0.3s ease;
+}
+
+.gallery-nav {
+  display: none;
+  background-color: #d8e6f9;
+  text-align: center;
+}
+
+.gallery-nav.active {
+  display: block;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.gallery-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.gallery-nav ul li {
+  margin: 10px 0;
+}
+
+.gallery-nav ul li a {
+  text-decoration: none;
+  color: #0d47a1;
+  font-weight: 600;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.gallery-nav ul li a:hover {
+  background-color: #bbdefb;
+}
+
+/* Desktop view */
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .gallery-nav {
+    display: block;
+  }
+
+  .gallery-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .gallery-nav ul li {
+    margin: 0;
+  }
+}
+/* --- END of Mobile Hamburger Navigation --- */
+
 .gallery-nav-header {
   position: sticky;
   top: 0;
