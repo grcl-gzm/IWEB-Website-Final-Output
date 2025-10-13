@@ -208,7 +208,7 @@ nav ul li a:hover {
 .dashed-divider {
   border: none;
   border-top: 5px dashed #7DAEF6;
-  margin: 80px auto;
+  margin: 30px auto 20px auto;
   width: 80%;
   max-width: 800px;
   min-width: 220px;
@@ -566,14 +566,14 @@ section h2, section h3 {
 /* Gallery Sections - ALL VISIBLE */
 .gallery-section {
   display: block;
-  margin-bottom: 60px;
+  margin-bottom: 35px;
   background-color:#cfe1f8;
 }
 
 .gallery-section-title {
   text-align: center;
   font-size: 2.2rem;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   color: #111;
 }
 
@@ -584,7 +584,7 @@ section h2, section h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 28px;
+  margin-bottom: 15px;
 }
 
 .swipe-gallery {
