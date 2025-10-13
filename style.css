@@ -704,7 +704,7 @@ section h2, section h3 {
 /* --- Art Commission Box --- */
 .art-commission-box {
     padding: 20px;
-    margin: 20px auto;
+    margin: -5px auto 20px auto;
     max-width: 900px; 
     border: 1px solid #ccc; 
     border-radius: 8px;
@@ -723,7 +723,7 @@ section h2, section h3 {
     padding: 10px;
 }
 
-/* Vertical Divider */
+/* Vertical Divider for Desktop */
 .commission-divider {
     width: 1px;
     background-color: #ccc;
@@ -829,10 +829,15 @@ section h2, section h3 {
 /* Footer */
 footer {
   text-align: center;
-  padding: 15px;
+  padding: 10px 15px 10px 15px;
   background: #6fa3f7;
   color: #fff;
-  margin-top: 40px;
+  margin-top: 100px;
+  margin-bottom: 0;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 footer p {
@@ -840,6 +845,8 @@ footer p {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  margin: 0;
+  padding: 5px 0;
 }
 
 footer p img {
@@ -1027,8 +1034,71 @@ footer p img {
 
   .art-commission-box {
     width: 95%;
-    padding: 10px;
-    margin: 0 auto;
+    padding: 15px;
+    margin: -5px auto 10px auto;
+  }
+
+  /* Mobile Contact Page Layout */
+  .commission-container {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .commission-form {
+    order: 1; /* Form goes on top */
+    padding: 0;
+    width: 100%;
+  }
+
+  .commission-contact {
+    order: 2; /* Contact info goes on bottom */
+    padding: 20px 0 0 0;
+    min-height: auto;
+    width: 100%;
+    border-top: 2px solid #ccc;
+    margin-top: 15px;
+    position: relative;
+  }
+
+  .commission-contact::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 20%;
+    right: 20%;
+    height: 2px;
+    background-color: #ccc;
+  }
+
+  /* Hide vertical divider on mobile */
+  .commission-divider {
+    display: none;
+  }
+
+  /* Center form elements */
+  .form-group {
+    text-align: left;
+  }
+
+  .form-group label {
+    text-align: left;
+  }
+
+  /* Center contact info */
+  .commission-contact h3 {
+    text-align: center;
+  }
+
+  .contact-info p {
+    justify-content: center;
+  }
+
+  /* Adjust social icons positioning for mobile */
+  .social-icons {
+    margin-top: 20px;
+    justify-content: center;
   }
 
   .form-group input,
@@ -1042,14 +1112,22 @@ footer p img {
   }
 
   footer {
-    padding: 10px;
+    padding: 8px 10px 8px 10px;
     text-align: center;
+    margin-bottom: 0;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   footer p {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 6px;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+    padding: 3px 0;
   }
 
   /* Mobile Hamburger Navigation Styles */
