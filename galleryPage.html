@@ -145,23 +145,5 @@
   <footer>
     <p>© Crearay || Akimi <img src="Main Page/icons/MiniLogo.png" alt="Mini Logo"></p>
   </footer>
-
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const galleryNav = document.getElementById('galleryNav');
-    const navLinks = galleryNav.querySelectorAll('a');
-
-    // Toggle menu when hamburger is clicked
-    hamburger.addEventListener('click', () => {
-      galleryNav.classList.toggle('active');
-    });
-
-    // Close menu when any category link is clicked
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        galleryNav.classList.remove('active');
-      });
-    });
-  </script>
 </body>
 </html>

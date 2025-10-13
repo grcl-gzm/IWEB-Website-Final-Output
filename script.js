@@ -105,3 +105,26 @@ document.addEventListener('DOMContentLoaded', function() {
   setupSwipeGallery('.char-slide', 'char-prev', 'char-next');
   setupSwipeGallery('.vid-slide', 'vid-prev', 'vid-next');
 });
+
+// ---------------------------------------
+// Hamburger Menu for Gallery Page
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.getElementById('hamburger');
+  const galleryNav = document.getElementById('galleryNav');
+
+  if (hamburger && galleryNav) {
+    const navLinks = galleryNav.querySelectorAll('a');
+
+    // Toggle menu when hamburger is clicked
+    hamburger.addEventListener('click', () => {
+      galleryNav.classList.toggle('active');
+    });
+
+    // Close menu when any category link is clicked
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        galleryNav.classList.remove('active');
+      });
+    });
+  }
+});
