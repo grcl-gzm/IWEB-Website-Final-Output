@@ -39,23 +39,27 @@
   </header>
 
   <!-- Sticky Gallery Header with Title and Navigation -->
-  <div class="gallery-nav-header">
-    <h1 id="personal-projects" class="gallery-page-title">Personal Projects</h1>
-    <button class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+  <div class="gallery-header-wrapper">
+    <input type="checkbox" id="hamburger-toggle" class="hamburger-toggle">
+    <div class="gallery-nav-header">
+      <h1 id="personal-projects" class="gallery-page-title" title="Click here to scroll to the top">
+      Personal Projects
+      </h1>
+      <label for="hamburger-toggle" class="hamburger-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    <nav class="gallery-nav" id="gallery-nav">
+      <ul>
+        <li><a href="#invitation">Invitation Concepts</a></li>
+        <li><a href="#logo">Logo Design Concepts</a></li>
+        <li><a href="#character">Character & Game Concepts</a></li>
+        <li><a href="#environment">3D Environment Models</a></li>
+      </ul>
+    </nav>
   </div>
-
-  <nav class="gallery-nav" id="galleryNav">
-    <ul>
-      <li><a href="#invitation">Invitation Concepts</a></li>
-      <li><a href="#logo">Logo Design Concepts</a></li>
-      <li><a href="#character">Character & Game Concepts</a></li>
-      <li><a href="#environment">3D Environment Models</a></li>
-    </ul>
-  </nav>
 
   <!-- Gallery Content -->
   <!-- Digital Art / Graphics -->
@@ -72,6 +76,9 @@
       </div>
     </section>
 
+    <hr class="dashed-divider">
+
+     <!-- Logo Design -->
     <section id="logo" class="gallery-section">
       <h2 class="gallery-section-title">Logo Design Concepts</h2>
       <div class="swipe-feature">
@@ -86,6 +93,9 @@
       </div>
     </section>
 
+    <hr class="dashed-divider">
+
+    <!-- Character & Game Concepts -->
     <section id="character" class="gallery-section">
       <h2 class="gallery-section-title">Character & Game Concepts</h2>
       <div class="swipe-feature">
@@ -101,6 +111,9 @@
       </div>
     </section>
 
+    <hr class="dashed-divider">
+    
+    <!-- 3D Environment Models -->
     <section id="environment" class="gallery-section">
       <h2 class="gallery-section-title">3D Environment Models</h2>
       <div class="swipe-feature">
@@ -132,7 +145,7 @@
             Your browser does not support the video tag.
           </video>
           <video class="swipe-slide vid-slide" controls width="600">
-            <source src="Main Page/galleryAssets/Dungeon.mov" type="video/mp4">
+            <source src="Main Page/galleryAssets/Dungeon 3D.mov" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
