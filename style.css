@@ -355,46 +355,52 @@ section h2, section h3 {
 /* ========== GALLERY PAGE STYLES ======== */
 /* ======================================= */
 
-/* --- START of Mobile Hamburger Navigation --- */
-.gallery-nav-header {
+/* Gallery Header Wrapper for Sticky Positioning */
+.gallery-header-wrapper {
   position: sticky;
   top: 0;
-  background-color: #cfe1f8;
+  z-index: 1000;
+  background-color: #A6CDFF;
+}
+
+/* Hamburger Toggle (Hidden Checkbox) */
+.hamburger-toggle {
+  display: none;
+}
+
+/* Gallery Navigation Header */
+.gallery-nav-header {
+  background-color: #A6CDFF;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 15px;
-  z-index: 1000;
+  padding: 10px 20px;
+  position: relative;
 }
 
-/* Keep title centered */
+/* Keep title on the left */
 .gallery-page-title {
-  flex: 1;
-  text-align: center;
   color: #0d47a1;
   font-weight: 700;
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
+  cursor: pointer;
 }
 
-/* Make hamburger visible on the right side */
-.hamburger {
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: flex;
+/* Hamburger Button */
+.hamburger-btn {
+  display: none; /* Hidden on desktop */
   flex-direction: column;
   justify-content: space-between;
-  height: 20px;
   width: 26px;
-  z-index: 1100;
+  height: 20px;
+  cursor: pointer;
+  z-index: 1001;
+  position: absolute;
+  right: 20px;
 }
 
-.hamburger span {
+.hamburger-btn span {
   display: block;
   height: 3px;
   width: 100%;
@@ -403,21 +409,27 @@ section h2, section h3 {
   transition: 0.3s ease;
 }
 
+/* Hamburger Animation */
+.hamburger-toggle:checked + .gallery-nav-header .hamburger-btn span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-toggle:checked + .gallery-nav-header .hamburger-btn span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-toggle:checked + .gallery-nav-header .hamburger-btn span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Gallery Navigation */
 .gallery-nav {
-  display: none;
-  background-color: #d8e6f9;
-  text-align: center;
+  background-color: #A6CDFF;
+  display: block; 
 }
 
-.gallery-nav.active {
-  display: block;
-  animation: slideDown 0.3s ease;
-}
+/* Desktop Gallery Navigation Styles */
 
-@keyframes slideDown {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
 
 .gallery-nav ul {
   list-style: none;
@@ -493,7 +505,7 @@ section h2, section h3 {
 
 /* Gallery Page Title */
 .gallery-page-title {
-  background: none;   
+  background: #A6CDFF;   
   z-index: 101;
   text-align: center;
   font-size: 2.8rem;
@@ -981,19 +993,17 @@ footer p img {
     position: sticky;
     top: 60px; 
     z-index: 90;
-    background: #cfe1f8; 
+    background: #A6CDFF; 
   }
 
   .gallery-page-title {
     padding-top: 8px;
     padding-bottom: 6px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
   .gallery-nav {
     padding-top: 4px;
     padding-bottom: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
   }
 
   /* Video Gallery layout */
@@ -1040,6 +1050,65 @@ footer p img {
     flex-direction: column;
     align-items: center;
     gap: 6px;
+  }
+
+  /* Mobile Hamburger Navigation Styles */
+  .hamburger-btn {
+    display: flex !important;
+  }
+
+  .gallery-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #A6CDFF;
+    z-index: 199;
+  }
+
+  .hamburger-toggle:checked ~ .gallery-nav {
+    display: block;
+  }
+
+  .gallery-nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 10px;
+    justify-items: center;
+  }
+
+  .gallery-nav ul li {
+    width: 100%;
+  }
+
+  .gallery-nav ul li a {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+    display: block;
+  }
+
+  .gallery-nav-header {
+    background: #A6CDFF !important;
+    padding: 10px 25px;
+  }
+
+  .gallery-page-title {
+    padding-top: 8px;
+    padding-bottom: 6px;
+    text-align: center;
+  }
+
+  .hamburger-btn {
+    right: 25px;
+  }
+
+  .gallery-nav {
+    padding-top: 4px;
+    padding-bottom: 8px;
   }
 }
 
