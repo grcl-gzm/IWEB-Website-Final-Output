@@ -1,5 +1,6 @@
 # CREARAY - Artist Portfolio Website
 **Website tagline**
+
 Ideas may scatter, but the final picture always comes together
 
 # Purpose of the Website
