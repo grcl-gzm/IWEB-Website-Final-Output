@@ -5,9 +5,27 @@
 
 ---
 ## Group Members
-- Gozum, Graciela
-- Pineda, Angel Raphaelle
-- Sison, Franchesca Zyreen
+
+### **Gozum, Graciela**  
+*[Project Lead / Website Structure / Main Page / Code Cleanup]*  
+- Created the basic website structure (header, navigation, footer)  
+- Developed the main page and assisted in the improved design of the gallery page
+- Handled code cleanup and file checking  
+
+───── ⋆⋅☆⋅⋆ ───── ⋆⋅☆⋅⋆ ───── ⋆⋅☆⋅⋆ ───── ⋆⋅☆⋅⋆ ───── 
+
+### **Pineda, Angel Raphaelle**  
+*[Contact Page / Responsive Design (Tablet & Mobile)]*  
+- Developed the contact page  
+- Handled the responsive design for tablet and mobile view  
+
+───── ⋆⋅☆⋅⋆ ───── ⋆⋅☆⋅⋆ ───── ⋆⋅☆⋅⋆ ───── ⋆⋅☆⋅⋆ ───── 
+     
+### **Sison, Franchesca Zyreen**  
+*[Gallery Page / Mobile Navigation]*  
+- Designed and coded the gallery page  
+- Implemented the hamburger navigation for mobile view  
+
 
 ---
 ## Purpose of the Website
