@@ -1,3 +1,8 @@
+// Graciela Gozum
+// Angel Raphaelle Pineda
+// Franchesca Zyreen Sison
+// WD 203
+
 // Scroll to top when clicking the "Personal Projects" title
 document.addEventListener("DOMContentLoaded", function () {
   const title = document.getElementById("personal-projects");
